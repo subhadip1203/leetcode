@@ -6,11 +6,11 @@ Given an integer n, return the number of trailing zeroes in n!.
 
 class Solution:
     def trailingZeroes(self, n: int) -> int:
-        k, tot = 5, 0
-        while k <= n:
-            tot += n // k
-            k = k * 5
-        return tot
+        i, total = 5, 0
+        while i <= n:
+            total += n // i
+            i = i * 5
+        return total
 
 n=3
 print(Solution().trailingZeroes(n))
