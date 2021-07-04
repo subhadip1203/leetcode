@@ -7,6 +7,8 @@ Given an integer n, return the number of trailing zeroes in n!.
 class Solution:
     def trailingZeroes(self, n: int) -> int:
         i, total = 5, 0
+
+        # 5 , 25 ,125
         while i <= n:
             total += n // i
             i = i * 5
