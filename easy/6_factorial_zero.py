@@ -25,3 +25,6 @@ print(Solution().trailingZeroes(n))
 
 n=0
 print(Solution().trailingZeroes(n))
+
+n=51
+print(Solution().trailingZeroes(n))
