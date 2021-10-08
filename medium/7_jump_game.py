@@ -17,7 +17,7 @@ class Solution:
                 # print(maxReachableIndex)
                 if maxReachableIndex > list_length-1:
                     return True
-        
+
         return False
 
 
