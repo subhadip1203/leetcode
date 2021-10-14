@@ -9,18 +9,18 @@ from typing import List
 
 
 def findCircleNum(self, isConnected: List[List[int]]) -> int:
-    l = len(isConnected)
-    visited = [0]*l
+    length = len(isConnected)
+    visited = [0]*length
 
     def dfs(node):
         visited[node] = True
-        for j in range(0, l):
+        for j in range(0, length):
             if isConnected[node][j] == 1 and visited[j] is False:
                 dfs(j)
 
     count = 0
 
-    for i in range(0, l):
+    for i in range(0, length):
         if visited[i] is False:
             count += 1
             dfs(i)
