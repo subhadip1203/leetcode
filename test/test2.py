@@ -18,8 +18,15 @@ class LinkedList:
   def __init__(self):
     self.head = None
 
-  def append(self,data):
-    new_node = Node(data)
+  def append(self,start , end):
+    start_node = Node(start)
+    end_node = Node(end)
     if self.head ==None:
-      self.head=new_node
+      self.head=start_node
+      start_node.next=end_node
+    else:
+      current = self.head
+      while current.data <= start and ( current.next.data >= end or current.next.data == None) :
+        print(current.data)
+       
     
