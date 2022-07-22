@@ -26,7 +26,22 @@ class LinkedList:
       start_node.next=end_node
     else:
       current = self.head
-      while current.data <= start and ( current.next.data >= end or current.next.data == None) :
-        print(current.data)
-       
-    
+      while current.data <= start :
+        current = current.next
+      
+      #in case this the last node
+      if current.next == None:
+        current.next = start_node
+        start_node.next = end_node
+        return True
+      
+      #in case next node is greater than end time
+      elif current.next.data >= end:
+        temp = current.next
+        current.next = start_node
+        start_node.next=end_node
+        end_node.next = temp
+        return True
+      #in case next node is smaller than end time
+      else:
+        return False
