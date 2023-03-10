@@ -6,6 +6,13 @@ Given a non-empty array of integers nums, every element appears twice except for
 You must implement a solution with a linear runtime complexity and use only constant extra space.
 '''
 
+
+# def def findNum(arr):
+#     return 2*sum(set(arr))-sum(arr)
+
+
+
+
 def findNum(arr):
     result = 0
     for x in arr:
